@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <!-- Icon -->
+    <link rel="Icon" href="imgs/10635076.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Sweet Alert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- Animated Css -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+
+    <div class="container animate__animated animate__slideInDown">
+        <div class="heading">
+            <h2 class="header-title">Product Management System</h2>
+        </div>
+
+        <div class="inputs ">
+            <input type="text" id="title" placeholder="Title">
+            <p>You must enter at least 3 letters, and the entry must not begin with a space or special characters.</p>
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="Count : No.">
+            <input type="text" id="category" placeholder="Category">
+            <p>You must enter at least 2 letters, and the entry must not begin with a space or special characters.</p>
+            <button id="submit">Create Product</button>
+        </div>
+        
+        <div class="outputs">
+                <input type="text" id="search" placeholder="Search" oninput="searchProduct(this.value)">
+                <div class="searchedButtons">
+                    <button id="searchTitle" onclick="getSearchMood(this.id)" class="animate__animated animate__slideInLeft">Search By Title</button>
+                    <button id="categoryTitle" onclick="getSearchMood(this.id)" class="animate__animated animate__slideInRight">Search By Category</button>
+                </div>
+        </div>
+        
+        <div id="deleteAll">
+            
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="tBody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

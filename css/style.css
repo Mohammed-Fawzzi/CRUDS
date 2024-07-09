@@ -1,0 +1,262 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(../imgs/Wave-100s-1366px\ \(2\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(101, 60, 139,0.9);
+}
+
+/* Body */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background: linear-gradient(100deg,rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(40px);
+    border-radius: 5px;
+    border:1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.30);
+}
+.heading {
+    color:#fff;
+    margin: 10px auto;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+.heading h2 {
+    font-size: 35px;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-family: "Quantico", sans-serif;
+}
+input {
+    width: 100%;
+    height: 38px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    padding: 5px 5px;
+    border-radius: 4px;
+    color: #653383;
+    caret-color: #653383;
+}
+input:focus {
+    outline: 1.5px solid #653383;
+}
+.price input {
+    width: 21%;
+    margin-right: 10px;
+}
+.price #total {
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    background-color: #dc3545;
+}
+.price #total::before {
+    content: 'Total : ';
+}
+.inputs button {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: rgba(101, 60, 139,0.6);
+    transition: all 0.3s;
+}
+.inputs button:hover {
+    background: transparent;
+    border:1.5px solid rgba(255, 255, 255, 0.60);
+}
+.searchedButtons {
+    display: flex;
+    justify-content: space-around;
+}
+.outputs #searchTitle {
+    width: 25%;
+    height: 40px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: rgba(101, 60, 139,0.6);
+    transition: all 0.3s;
+}
+.outputs #searchTitle:hover {
+    background: transparent;
+    border:1.5px solid rgba(255, 255, 255, 0.60);
+}
+.outputs #categoryTitle {
+    width: 25%;
+    height: 40px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: rgba(101, 60, 139,0.6);
+    transition: all 0.3s;
+}
+.outputs #categoryTitle:hover {
+    background: transparent;
+    border:1.5px solid rgba(255, 255, 255, 0.60);
+}
+.deleteAll {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    background: #dc3545;
+    transition: all 0.3s;
+    margin: 15px 0;
+}
+/* Display */
+table {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(101, 60, 139,0.6);
+}
+table button {
+    width: 75%;
+    border-radius: 5px;
+}
+th , td {
+    padding: 5px 2px;
+}
+table th {
+    text-transform: uppercase;
+}
+table #updateBtn,
+table #deleteBtn {
+    padding: 8px 0;
+    transition: all 0.3s;
+}
+table #updateBtn {
+    border: 1px solid #3498db;
+    color: #3498db;
+}
+table #updateBtn:hover {
+    color: #fff;
+    background: rgb(52, 152, 219);
+}
+table #deleteBtn {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+table  #deleteBtn:hover {
+    color: #fff;
+    background: #dc3545;
+}
+
+/* Alert Buttons */
+.custom-confirmButton,
+.custom-cancelButton {
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+.custom-confirmButton {
+    background: #3498db;
+    margin: 0px 10px;
+}
+.custom-cancelButton {
+    background: #dc3545;
+}
+.custom-confirmButton:hover {
+    background: #1185d3;
+}
+.custom-cancelButton:hover {
+    background: #d31d2f;
+}
+
+/* Regex Alert */
+.inputs p {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    width: 60%;
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .price input {
+        width: 35%;
+        margin-right: 10px;
+    }
+    .inputs p {
+        width: 100%;
+    }
+    .price input:last-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .price input {
+        width: 100%;
+        margin-right: 0;
+    }
+    .price #total {
+        display: block;
+        margin-top: 10px;
+    }
+    .inputs p {
+        width: 100%; 
+    }
+    .searchedButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .outputs #searchTitle, .outputs #categoryTitle {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .inputs p {
+        width: 100%;
+    }
+    .heading h2 {
+        font-size: 35px;
+    }
+    .outputs #searchTitle, .outputs #categoryTitle {
+        width: 100%;
+    }
+}
+
+
