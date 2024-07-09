@@ -5,7 +5,7 @@ This is a JavaScript CRUD application for managing products. It uses HTML, CSS, 
 
 ## Features
 
-- Add, update, delete, and search in products
+- Add , update , delete , and search in products
 - Search functionality
 - Regular expressions 
 - User-friendly interface
