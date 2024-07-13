@@ -25,3 +25,9 @@ This is a JavaScript CRUD application for managing products. It uses HTML, CSS, 
 ![Preview Image 1](preview/preview1.png)
 ![Preview Image 2](preview/preview2.png)
 ![Preview Image 3](preview/preview3.png)
+
+
+## Live Demo
+
+Check out the live demo [here](https://mohammed-fawzzi.github.io/CRUDS/).
+
